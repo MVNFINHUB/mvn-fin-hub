@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — MVNFinHub</title>
+  <meta name="description" content="Contact MVNFinHub for educational queries, non-advisory support, or collaboration." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="theme-alien">
+
+  <!-- Header -->
+  <header class="site-header container" role="banner">
+    <a class="brand" href="/" aria-label="MVNFinHub home">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/images/MVNFinHub-mark.svg">
+        <img src="/assets/images/MVNFinHub-logo.svg" alt="MVNFinHub" class="logo">
+      </picture>
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="/education.html">Education</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" aria-current="page" class="btn-outline">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggleTop" class="icon-btn" aria-pressed="true" title="Toggle theme">🛸</button>
+      <a class="btn-primary" href="/education.html">Start learning</a>
+      <button id="mobileNavToggleTop" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile nav fallback -->
+  <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <a href="/education.html">Education</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <main role="main">
+    <section class="hero container" style="padding-top:40px;padding-bottom:18px;">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch</h1>
+      <p class="lead">For educational queries, non‑advisory support requests, or collaboration — we’re here to help. Please avoid sharing sensitive personal or financial information in initial messages.</p>
+    </section>
+
+    <section class="section container" style="padding-top:18px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
+        <div class="card" aria-labelledby="contact-email">
+          <h3 id="contact-email">Email</h3>
+          <p>
+            <a href="mailto:finmvn00@gmail.com">finmvn00@gmail.com</a><br>
+            <small class="muted">Use this for general inquiries, suggestions, and collaboration requests.</small>
+          </p>
+        </div>
+
+        <div class="card" aria-labelledby="contact-response">
+          <h3 id="contact-response">Response time</h3>
+          <p>
+            Typical response within 2–3 business days. Urgent requests: include "Urgent" in the subject line of your email.
+          </p>
+        </div>
+
+        <div class="card" aria-labelledby="contact-privacy">
+          <h3 id="contact-privacy">Privacy</h3>
+          <p class="muted">We treat your message as confidential. Do not include sensitive financial or personal data in initial messages. See our <a href="/privacy.html">privacy policy</a> for details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted container" style="padding-top:18px;">
+      <h2>Send a message</h2>
+      <p class="muted">Use the form below for general enquiries. The form submits to an example endpoint; if no backend is configured, the page will instruct you to email directly.</p>
+
+      <form id="contactForm" class="contact-form" style="margin-top:18px; max-width:720px;" method="post" action="/api/contact" novalidate>
+        <input type="text" name="website" style="position:absolute;left:-10000px;top:auto;opacity:0;" tabindex="-1" autocomplete="off">
+
+        <label for="name">Full name <span class="muted">*</span></label>
+        <input id="name" name="name" type="text" required placeholder="Your full name" aria-required="true" style="width:100%; padding:10px; margin:8px 0;" />
+
+        <label for="email">Email <span class="muted">*</span></label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" aria-required="true" style="width:100%; padding:10px; margin:8px 0;" />
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="e.g. Suggest a topic" style="width:100%; padding:10px; margin:8px 0;" />
+
+        <label for="message">Message <span class="muted">*</span></label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your question or request" aria-required="true" style="width:100%; padding:10px; margin:8px 0;"></textarea>
+
+        <label style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+          <input id="consent" name="consent" type="checkbox" required />
+          <span>I consent to MVNFinHub storing my message and contact details to reply. See <a href="/privacy.html">privacy policy</a>.</span>
+        </label>
+
+        <div style="margin-top:16px; display:flex; gap:12px; align-items:center;">
+          <button type="submit" class="btn-primary">Send message</button>
+          <button type="button" id="contactFormReset" class="btn-ghost">Reset</button>
+          <div id="formStatus" role="status" aria-live="polite" style="margin-left:8px;color:var(--muted)"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="section container" style="padding-top:18px;">
+      <div class="disclaimer" role="note" aria-live="polite">
+        <strong>Important note:</strong><br>
+        MVNFinHub provides educational content and non‑advisory, administrative support only. We do not provide personalised investment advice, portfolio management, or tax advice. For tailored guidance consult a licensed professional.
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer container" role="contentinfo" style="margin-top:36px;">
+    <div>
+      <p>© 2026 MVNFinHub</p>
+      <p class="muted">Free concept-first education. No advisory services or guarantees.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </footer>
+
+  <script src="/script.js"></script>
+
+  <script>
+    // Client-side form handling (progressive enhancement)
+    (function(){
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const resetBtn = document.getElementById('contactFormReset');
+
+      function setStatus(msg, isError){
+        status.textContent = msg;
+        status.style.color = isError ? '#ffb4b4' : 'var(--muted)';
+      }
+
+      resetBtn.addEventListener('click', ()=> {
+        form.reset();
+        setStatus('', false);
+      });
+
+      form.addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+        setStatus('Sending…', false);
+
+        if(!form.checkValidity()){
+          form.reportValidity();
+          setStatus('Please complete required fields.', true);
+          return;
+        }
+
+        // Honeypot check
+        if(form.website && form.website.value.trim() !== ''){
+          setStatus('Message received.', false);
+          form.reset();
+          return;
+        }
+
+        // Prepare payload
+        const payload = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          subject: form.subject.value.trim(),
+          message: form.message.value.trim()
+        };
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if(res.ok){
+            setStatus('Thanks — we will respond within 2–3 business days.', false);
+            form.reset();
+          } else {
+            setStatus('Server not available. Please email finmvn00@gmail.com with your message.', true);
+          }
+        } catch (err) {
+          setStatus('Could not connect to server. Please email finmvn00@gmail.com', true);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
