@@ -2,152 +2,244 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f1724" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MVNFINHUB — Finance. Education. Clarity.</title>
-  <meta name="description" content="Free, concept-first finance education and clarity. Learning paths, market insights, and responsible guidance for professionals and beginners." />
+  <meta name="description" content="MVNFINHUB — free, concept-first finance education and clarity. Learning paths, market insights, and responsible guidance for professionals and beginners." />
+
+  <!-- Social / SEO -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MVNFINHUB — Finance. Education. Clarity." />
   <meta property="og:description" content="Free, concept-first finance education, responsible learning, and clear market insights." />
   <meta property="og:image" content="assets/images/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MVNFINHUB",
+    "url": "https://mvnfinhub.example",
+    "description": "Free, concept-first finance education and financial clarity platform focused on learning, transparency, and responsible understanding."
+  }
+  </script>
 </head>
-
 <body class="light">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="MVNFINHUB home">
-        <span class="logo-text">MVN<span class="accent">FINHUB</span></span>
-      </a>
 
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">
-        ☰
-      </button>
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="MVNFINHUB home">
+      <svg class="logo" viewBox="0 0 60 24" width="48" height="20" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6EE7B7"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
+        <rect width="60" height="24" rx="4" fill="url(#g)"></rect>
+        <text x="8" y="16" font-family="Inter, system-ui, -apple-system" font-weight="700" font-size="10" fill="#0b1220">MVN</text>
+      </svg>
+      <span class="brand-text">FINHUB</span>
+    </a>
 
-      <nav id="primaryNav" class="primary-nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="btn-outline">Contact</a></li>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn-outline">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle color theme">🌙</button>
+      <a href="education.html" class="btn-primary cta">Start Learning</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" role="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="eyebrow">Learn · Understand · Decide</p>
+        <h1>
+          Finance explained with clarity —<br>
+          practical, modern, and unbiased.
+        </h1>
+        <p class="lead">
+          MVNFINHUB provides free, concept-first finance education and contextual market insights to help you build real financial understanding — not promises.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn-primary" href="education.html">Explore Education</a>
+          <a class="btn-ghost" href="insights.html">Read Insights</a>
+        </div>
+
+        <ul class="trust-list" aria-hidden="true">
+          <li><strong>Free</strong> concept-driven lessons</li>
+          <li><strong>Structured</strong> learning paths (concept-wise)</li>
+          <li><strong>No hype</strong> — education-first</li>
         </ul>
-      </nav>
+      </div>
 
-      <div class="header-actions">
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
-        <a href="education.html" class="btn-primary">Start Learning</a>
+      <div class="hero-right" aria-hidden="true">
+        <div class="card-visual">
+          <img src="assets/images/hero-finance-3d.png" alt="Illustration: finance and learning" loading="lazy" />
+        </div>
+
+        <div class="floating-card">
+          <strong>Featured</strong>
+          <p>Understanding interest rates — concept overview</p>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="eyebrow">Learn · Understand · Decide</p>
-          <h1>Finance explained with clarity —<br> practical, modern, and unbiased.</h1>
-          <p class="lead">Free, concept-first finance education and contextual market insights to help you build real financial understanding — not promises.</p>
-          <div class="hero-ctas">
-            <a class="btn-primary" href="education.html">Explore Education</a>
-            <a class="btn-ghost" href="insights.html">Read Insights</a>
-          </div>
-          <ul class="trust-list">
-            <li><strong>Free</strong> concept-driven lessons</li>
-            <li><strong>Structured</strong> learning paths</li>
-            <li><strong>No hype</strong> — education-first</li>
-          </ul>
-        </div>
-        <div class="hero-right">
-          <img src="assets/images/hero-illustration.png" alt="Illustration of calm finance learning" loading="lazy" />
-        </div>
+  <!-- FEATURES -->
+  <section class="section features">
+    <div class="container">
+      <h2 class="section-title">What we offer</h2>
+      <p class="section-sub">Free, clear learning paths, applied insights, and hands-on tools for everyday finance.</p>
+
+      <div class="grid grid-3">
+        <article class="feature-card" aria-labelledby="f1">
+          <div class="icon" aria-hidden="true">📘</div>
+          <h3 id="f1">Finance Education</h3>
+          <p>Concept-first explanations and guided learning designed to be free and accessible to everyone.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f2">
+          <div class="icon" aria-hidden="true">📈</div>
+          <h3 id="f2">Market Insights</h3>
+          <p>Contextual, non-sensational explanations of market moves and economic trends.</p>
+        </article>
+
+        <article class="feature-card" aria-labelledby="f3">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <h3 id="f3">Trust & Transparency</h3>
+          <p>No guarantees, no sales pressure — clear disclaimers and evidence-backed explanations.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FEATURES -->
-    <section class="section features">
-      <div class="container">
-        <h2>What we offer</h2>
-        <p class="section-sub">Free, clear learning paths, applied insights, and hands-on tools for everyday finance.</p>
-        <div class="grid grid-3">
-          <div class="feature-card">
-            <div class="icon">📘</div>
-            <h3>Finance Education</h3>
-            <p>Concept-first explanations and guided learning designed to be free and accessible to everyone.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon">📈</div>
-            <h3>Market Insights</h3>
-            <p>Contextual, non-sensational explanations of market moves and economic trends.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon">🔒</div>
-            <h3>Trust & Transparency</h3>
-            <p>No guarantees, no sales pressure — clear disclaimers and evidence-backed explanations.</p>
-          </div>
+  <!-- HERO FEATURES / TIMELINE -->
+  <section class="section muted how">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <div class="grid grid-3">
+        <div class="how-step">
+          <div class="num">1</div>
+          <h4>Explore concepts</h4>
+          <p>Browse short, free concept explanations and learning paths.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section how-it-works muted">
-      <div class="container">
-        <h2>How it works</h2>
-        <div class="grid grid-3">
-          <div class="how-step"><div class="num">1</div><h4>Explore concepts</h4><p>Browse short, free concept explanations and learning paths.</p></div>
-          <div class="how-step"><div class="num">2</div><h4>Learn in small steps</h4><p>Micro-lessons and practical examples for fast understanding.</p></div>
-          <div class="how-step"><div class="num">3</div><h4>Apply & reflect</h4><p>Use free workbooks and examples to apply concepts responsibly.</p></div>
+        <div class="how-step">
+          <div class="num">2</div>
+          <h4>Learn in small steps</h4>
+          <p>Micro-lessons and practical examples for fast understanding.</p>
+        </div>
+        <div class="how-step">
+          <div class="num">3</div>
+          <h4>Apply & reflect</h4>
+          <p>Use free workbooks and examples to apply concepts responsibly.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials">
-      <div class="container">
-        <h2>What learners say</h2>
-        <blockquote class="testimonial">“MVNFINHUB makes finance calm and approachable. The lessons are clear and practical.”<footer>— Finance Learner</footer></blockquote>
-        <blockquote class="testimonial">“No hype, just clarity. Great for busy professionals.”<footer>— Working Professional</footer></blockquote>
-      </div>
-    </section>
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="section-title">What learners say</h2>
+      <div class="carousel" role="region" aria-label="Learner testimonials">
+        <blockquote class="testimonial">
+          <p>“MVNFINHUB makes finance calm and approachable. The lessons are clear and practical.”</p>
+          <footer>— Finance Learner</footer>
+        </blockquote>
 
-    <!-- FAQ -->
-    <section class="section faq muted">
-      <div class="container">
-        <h2>Frequently asked questions</h2>
-        <details><summary>Is MVNFINHUB an investment advisory platform?</summary><p>No. MVNFINHUB is an education-focused platform. We do not provide investment advice or recommendations.</p></details>
-        <details><summary>Do you guarantee financial outcomes or returns?</summary><p>No. We do not offer guarantees, promises, or outcome-based claims.</p></details>
-        <details><summary>Who is this platform designed for?</summary><p>Individuals, professionals, and learners who want to understand finance clearly and responsibly.</p></details>
-        <details><summary>Is the education free?</summary><p>Yes — all concept-wise educational content on MVNFINHUB is provided free of cost.</p></details>
+        <blockquote class="testimonial">
+          <p>“No hype, just clarity. Great for busy professionals.”</p>
+          <footer>— Working Professional</footer>
+        </blockquote>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- DISCLAIMER -->
-    <section class="section disclaimer muted">
-      <div class="container">
-        <h2>Important Disclaimer</h2>
-        <p>All content provided by MVNFINHUB is for educational and informational purposes only. Nothing on this website constitutes financial, investment, or professional advice.</p>
+  <!-- FAQ -->
+  <section class="section faq muted">
+    <div class="container">
+      <h2 class="section-title">Frequently asked questions</h2>
+      <div class="accordion" role="tablist" aria-label="Frequently asked questions">
+        <details>
+          <summary>Is MVNFINHUB an investment advisory platform?</summary>
+          <div class="panel">
+            No. MVNFINHUB is an education-focused platform. We do not provide investment advice or recommendations.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you guarantee financial outcomes or returns?</summary>
+          <div class="panel">
+            No. We do not offer guarantees, promises, or outcome-based claims.
+          </div>
+        </details>
+
+        <details>
+          <summary>Who is this platform designed for?</summary>
+          <div class="panel">
+            Individuals, professionals, and learners who want to understand finance clearly and responsibly.
+          </div>
+        </details>
+
+        <details>
+          <summary>Is the education free?</summary>
+          <div class="panel">
+            Yes — all concept-wise educational content on MVNFINHUB is provided free of cost. We focus on clear explanations and learning, not paid courses.
+          </div>
+        </details>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="section muted">
+    <div class="container disclaimer">
+      <h2>Important Disclaimer</h2>
+      <p>
+        All content provided by MVNFINHUB is for educational and informational purposes only.
+        Nothing on this website constitutes financial, investment, or professional advice.
+      </p>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-left">
         <p>© 2026 MVNFINHUB. All rights reserved.</p>
         <p class="muted">Free, concept-first education. No guarantees or advisory services.</p>
       </div>
+
       <div class="footer-right">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
+        <nav aria-label="Footer">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
