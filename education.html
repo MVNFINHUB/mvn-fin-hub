@@ -3,251 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Education — MVNFINHUB</title>
-  <meta name="description" content="Free, concept-first finance education at MVNFINHUB focused on clarity, fundamentals, and responsible financial understanding." />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Education — MVNFINHUB" />
-  <meta property="og:description" content="Free, structured concept guides, bite-sized lessons, and applied exercises to build long-term financial understanding." />
-  <meta property="og:image" content="assets/images/og-education.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured data (Catalog summary) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "MVNFINHUB",
-    "description": "Free, concept-first finance education focused on clarity, fundamentals, and responsible understanding.",
-    "url": "https://mvnfinhub.example"
-  }
-  </script>
-
-  <!-- Fonts & styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Education — MVNFinHub</title>
+  <meta name="description" content="Free, concept-first finance education at MVNFinHub: short guides, examples, and exercises." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
-<body class="light">
+<body class="theme-alien">
 
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="MVNFINHUB home">
-      <svg class="logo" viewBox="0 0 60 24" width="48" height="20" aria-hidden="true">
-        <defs><linearGradient id="g4" x1="0" x2="1"><stop offset="0" stop-color="#6EE7B7"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-        <rect width="60" height="24" rx="4" fill="url(#g4)"></rect>
-        <text x="8" y="16" font-family="Inter, system-ui, -apple-system" font-weight="700" font-size="10" fill="#04202f">MVN</text>
-      </svg>
-      <span class="brand-text">FINHUB</span>
+  <!-- Header: same as index -->
+  <header class="site-header container" role="banner">
+    <a class="brand" href="/" aria-label="MVNFinHub home">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/images/MVNFinHub-mark.svg">
+        <img src="/assets/images/MVNFinHub-logo.svg" alt="MVNFinHub" class="logo">
+      </picture>
     </a>
 
-    <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html" aria-current="page">Education</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn-outline">Contact</a></li>
-      </ul>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="/education.html" aria-current="page">Education</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn-outline">Contact</a>
     </nav>
 
     <div class="header-actions">
-      <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle color theme">🌙</button>
-      <a href="#paths" class="btn-primary cta">Explore concepts</a>
+      <button id="themeToggleTop" class="icon-btn" aria-pressed="true" title="Toggle theme">🛸</button>
+      <a class="btn-primary" href="#paths">Explore concepts</a>
+      <button id="mobileNavToggleTop" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="main" role="main">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Education</p>
-        <h1>Free concept-first finance education</h1>
-        <p class="lead">
-          Practical, structured concept guides and bite-sized lessons designed to move learners from basics to applied understanding — provided free of cost and focused on clarity.
-        </p>
-
-        <div class="hero-ctas">
-          <a class="btn-primary" href="#paths">View concepts</a>
-          <a class="btn-ghost" href="#catalog">Browse topics</a>
-        </div>
+  <main>
+    <section class="hero container" style="padding-top:40px;padding-bottom:20px;">
+      <p class="eyebrow">Education</p>
+      <h1>Free, concept-first finance education</h1>
+      <p class="lead">Practical concept guides and bite-sized lessons designed to build real understanding — provided free of cost.</p>
+      <div style="margin-top:16px;">
+        <a class="btn-primary" href="#paths">View concept groups</a>
+        <a class="btn-ghost" href="#catalog">Browse topics</a>
       </div>
+    </section>
 
-      <div class="hero-right" aria-hidden="true">
-        <div class="card-visual">
-          <img src="assets/images/education-visual.png" alt="Illustration: learning paths and curriculum" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEARNING PATHS / CONCEPT GROUPS -->
-  <section id="paths" class="section">
-    <div class="container">
+    <section id="paths" class="section container" style="padding-top:28px;">
       <h2 class="section-title">Concept groups</h2>
-      <p class="muted">Curated groups of concept guides that build understanding progressively. All content is free and designed to be concept-first.</p>
+      <p class="muted">Curated groups of concept guides that build understanding progressively. All content is free and concept-first.</p>
 
-      <div class="grid grid-3" style="margin-top:18px;">
-        <article class="feature-card" aria-labelledby="lp1">
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:18px;">
+        <div class="feature-card">
           <div class="icon" aria-hidden="true">🌱</div>
-          <h3 id="lp1">Foundations</h3>
-          <p>Money basics, saving, budgeting, interest, inflation, and essential economic concepts — explained with simple examples.</p>
-          <a href="education/foundations.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Explore concepts</a>
-        </article>
+          <h3>Foundations</h3>
+          <p>Money basics, saving, budgeting, interest, inflation — explained simply.</p>
+          <a href="/education/foundations.html" class="btn-ghost" style="margin-top:12px;display:inline-block;">Explore</a>
+        </div>
 
-        <article class="feature-card" aria-labelledby="lp2">
+        <div class="feature-card">
           <div class="icon" aria-hidden="true">⚖️</div>
-          <h3 id="lp2">Personal finance thinking</h3>
-          <p>Concepts for managing debt, insurance basics, planning approaches and frameworks for real-world decisions.</p>
-          <a href="education/personal-finance.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Explore concepts</a>
-        </article>
+          <h3>Personal finance thinking</h3>
+          <p>Debt, insurance basics, planning frameworks and decision-making concepts.</p>
+          <a href="/education/personal-finance.html" class="btn-ghost" style="margin-top:12px;display:inline-block;">Explore</a>
+        </div>
 
-        <article class="feature-card" aria-labelledby="lp3">
+        <div class="feature-card">
           <div class="icon" aria-hidden="true">📊</div>
-          <h3 id="lp3">Markets & macro</h3>
-          <p>Clear explanations of market mechanics, macro indicators, interest rates, and how to read narratives vs facts.</p>
-          <a href="education/markets.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Explore concepts</a>
-        </article>
+          <h3>Markets & macro</h3>
+          <p>How markets work, indicators, interest rates, and reading narratives vs facts.</p>
+          <a href="/education/markets.html" class="btn-ghost" style="margin-top:12px;display:inline-block;">Explore</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TOPICS / CATALOG (HIGHLIGHTS) -->
-  <section id="catalog" class="section muted">
-    <div class="container">
+    <section id="catalog" class="section container" style="padding-top:28px;">
       <h2 class="section-title">Topics (selected highlights)</h2>
-      <p class="muted">Short, free concept guides and practical examples that help you apply what you learn.</p>
-
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:18px;">
-        <div class="card">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px;">
+        <div class="feature-card">
           <h4>Understanding interest rates</h4>
           <p class="muted">A concept guide explaining how rates influence borrowing, saving, and markets.</p>
-          <small class="muted">Free • Concept overview</small>
         </div>
-
-        <div class="card">
+        <div class="feature-card">
           <h4>Budgeting that works</h4>
           <p class="muted">Practical rules and simple templates for everyday budgeting.</p>
-          <small class="muted">Free • Concept overview</small>
         </div>
-
-        <div class="card">
+        <div class="feature-card">
           <h4>Risk, probability & decision-making</h4>
           <p class="muted">Frameworks for thinking about uncertainty and making informed choices.</p>
-          <small class="muted">Free • Concept overview</small>
         </div>
-
-        <div class="card">
+        <div class="feature-card">
           <h4>Reading financial statements (intro)</h4>
           <p class="muted">Key ideas from balance sheets and cash flows — what matters and why.</p>
-          <small class="muted">Free • Concept overview</small>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- LEARNING PHILOSOPHY -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Our learning philosophy</h2>
-      <p>
-        MVNFINHUB designs education to prioritise understanding over rote facts. We publish free, short concept guides, worked examples, and reflection prompts so learners can apply concepts to real situations.
-      </p>
-
-      <ul style="margin-top:16px; line-height:1.7; color:var(--muted);">
-        <li>Short concept guides for steady progress</li>
-        <li>Practical examples and simple exercises</li>
-        <li>Clear disclaimers — no promises about outcomes</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- HOW TO START -->
-  <section class="section muted">
-    <div class="container">
-      <h2 class="section-title">How to start</h2>
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="how-step">
-          <div class="num">1</div>
-          <h4>Pick a concept group</h4>
-          <p class="muted">Choose the area that matches what you want to understand.</p>
-        </div>
-
-        <div class="how-step">
-          <div class="num">2</div>
-          <h4>Read concept guides</h4>
-          <p class="muted">Work through short guides and examples at your own pace.</p>
-        </div>
-
-        <div class="how-step">
-          <div class="num">3</div>
-          <h4>Practice & reflect</h4>
-          <p class="muted">Use free exercises and examples to apply the ideas responsibly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section faq">
-    <div class="container">
-      <h2 class="section-title">Frequently asked questions</h2>
-
-      <div class="accordion" role="tablist" aria-label="Education FAQ" style="margin-top:18px;">
-        <details>
-          <summary>Is all the education free?</summary>
-          <div class="panel">Yes — MVNFINHUB provides free, concept-wise educational content. We focus on explanations and learning rather than paid courses or memberships.</div>
-        </details>
-
-        <details>
-          <summary>Do you offer certificates or paid courses?</summary>
-          <div class="panel">Currently we focus on free concept education and practical guides. Certificates and paid offerings are not part of the platform now; any future changes will be clearly communicated.</div>
-        </details>
-
-        <details>
-          <summary>How often is content updated?</summary>
-          <div class="panel">We review and update material to keep explanations accurate and relevant. Dates of last update are shown on topic pages when available.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container cta-grid">
+    <section class="section cta-slim container" style="margin-top:28px;">
       <div>
-        <h3>Start learning with clarity</h3>
+        <h4>Start learning with clarity</h4>
         <p class="muted">Explore concept guides and build a practical understanding of finance — all free of charge.</p>
       </div>
-      <div class="cta-actions">
-        <a href="#paths" class="btn-primary large">Explore concepts</a>
-        <a href="contact.html" class="btn-ghost">Ask a question</a>
+      <div>
+        <a class="btn-primary" href="#paths">Explore concepts</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <p>© 2026 MVNFINHUB. All rights reserved.</p>
+  <footer class="site-footer container" role="contentinfo">
+    <div>
+      <p>© 2026 MVNFinHub</p>
       <p class="muted">Free concept-first education. No advisory services or guarantees.</p>
     </div>
 
-    <div class="footer-right">
-      <nav aria-label="Footer">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </div>
-</footer>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
