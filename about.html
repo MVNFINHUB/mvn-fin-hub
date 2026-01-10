@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — MVNFinHub</title>
+  <meta name="description" content="About MVNFinHub — free, concept-first finance education focused on clarity, transparency and responsible understanding." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="theme-alien">
+
+  <!-- Header -->
+  <header class="site-header container" role="banner">
+    <a class="brand" href="/" aria-label="MVNFinHub home">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/images/MVNFinHub-mark.svg">
+        <img src="/assets/images/MVNFinHub-logo.svg" alt="MVNFinHub" class="logo">
+      </picture>
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/education.html">Education</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html" aria-current="page">About</a>
+      <a href="/contact.html" class="btn-outline">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggleTop" class="icon-btn" aria-pressed="true" title="Toggle theme">🛸</button>
+      <a class="btn-primary" href="/education.html">Start learning</a>
+      <button id="mobileNavToggleTop" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile nav fallback -->
+  <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <a href="/education.html">Education</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <main role="main">
+    <section class="hero container" style="padding-top:40px;padding-bottom:18px;">
+      <p class="eyebrow">About</p>
+      <h1>Clarity, education, and responsible understanding</h1>
+      <p class="lead">MVNFinHub provides free, concept-first finance education and non-advisory support to help people understand financial ideas clearly and act responsibly.</p>
+      <div style="margin-top:16px;">
+        <a class="btn-primary" href="/education.html">Explore concept guides</a>
+        <a class="btn-ghost" href="/services.html">See services</a>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:22px;">
+      <h2 class="section-title">Why MVNFinHub exists</h2>
+      <p>Financial information can be noisy, promotional and hard to evaluate. We created MVNFinHub to offer calm, clear, and practical explanations — prioritising understanding over hype and transparency over promises.</p>
+    </section>
+
+    <section class="section muted container" style="padding-top:18px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">
+        <div class="feature-card">
+          <h3>Our mission</h3>
+          <p>Make financial understanding accessible through free, concept-first education and practical resources.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Our vision</h3>
+          <p>Be a trusted source people turn to for clear, evidence-centred financial explanations.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Our values</h3>
+          <p>Education-first, transparent, non-promotional, and respectful of informed decision-making.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:18px;">
+      <h2 class="section-title">Approach</h2>
+      <ul style="margin-top:12px;line-height:1.7;color:var(--muted);">
+        <li>Free concept guides focused on core ideas and practical examples.</li>
+        <li>Non-advisory administrative support (documentation, KYC assistance, tutorials) — no product recommendations.</li>
+        <li>Clear disclaimers and evidence-based explanations; we avoid promises or guarantees.</li>
+      </ul>
+    </section>
+
+    <section class="section muted container" style="padding-top:18px;">
+      <h2 class="section-title">Team & contributors</h2>
+      <p class="muted">A small team of educators, analysts and product designers focused on clear explanations and useful resources. If you'd like to contribute or collaborate, please reach out via the contact page.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px;">
+        <div class="card"><strong>Founder</strong><p class="muted">Curriculum design & content quality oversight.</p></div>
+        <div class="card"><strong>Content Lead</strong><p class="muted">Lesson design and accessibility for beginners.</p></div>
+        <div class="card"><strong>Product & Design</strong><p class="muted">Interfaces and micro-interactions for clear learning.</p></div>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:18px;">
+      <h2 class="section-title">Compliance & responsibility</h2>
+      <p>All content is educational and informational only. MVNFinHub does not provide personalised investment advice or guarantees of outcomes. For personalised advice, consult a licensed professional.</p>
+    </section>
+
+    <section class="section cta-slim container" style="margin-top:28px;">
+      <div>
+        <h4>Want to collaborate or suggest a topic?</h4>
+        <p class="muted">Use the contact page to suggest topics, request workshops, or share feedback.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="/contact.html">Contact us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <div>
+      <p>© 2026 MVNFinHub</p>
+      <p class="muted">Free, concept-first education. No advisory services or guarantees.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
