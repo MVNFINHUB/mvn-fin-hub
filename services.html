@@ -1,262 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — MVNFINHUB</title>
-  <meta name="description" content="Explore MVNFINHUB services: education-first support, research, and knowledge-based guidance — transparent, non-promotional, and focused on learning." />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Services — MVNFINHUB" />
-  <meta property="og:description" content="Education-first services: market research, literacy support, and knowledge-led guidance for individuals and organisations." />
-  <meta property="og:image" content="assets/images/og-services.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "MVNFINHUB",
-    "url": "https://mvnfinhub.example",
-    "description": "Education-first services: research, learning support and knowledge-based guidance without promotional advice or product recommendations."
-  }
-  </script>
-
-  <!-- Fonts & styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Explore MVNFINHUB's finance-related services including document support, KYC guidance, and more." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="light">
-
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="MVNFINHUB home">
-      <svg class="logo" viewBox="0 0 60 24" width="48" height="20" aria-hidden="true">
-        <defs><linearGradient id="g-services" x1="0" x2="1"><stop offset="0" stop-color="#6EE7B7"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-        <rect width="60" height="24" rx="4" fill="url(#g-services)"></rect>
-        <text x="8" y="16" font-family="Inter, system-ui, -apple-system" font-weight="700" font-size="10" fill="#04202f">MVN</text>
-      </svg>
-      <span class="brand-text">FINHUB</span>
-    </a>
-
-    <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="services.html" aria-current="page">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn-outline">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle color theme">🌙</button>
-      <a href="contact.html" class="btn-primary cta">Get in touch</a>
-    </div>
-  </div>
-</header>
-
-<main id="main" role="main">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Services</p>
-        <h1>Services built on clarity, not sales</h1>
-        <p class="lead">
-          MVNFINHUB offers education-focused services to help individuals and organisations understand financial topics clearly.
-          Everything we do is non-promotional — our goal is to increase understanding and support informed thinking.
-        </p>
-
-        <div class="hero-ctas">
-          <a class="btn-primary" href="#services-list">See services</a>
-          <a class="btn-ghost" href="contact.html">Request information</a>
-        </div>
-      </div>
-
-      <div class="hero-right" aria-hidden="true">
-        <div class="card-visual">
-          <img src="assets/images/services-visual.png" alt="Illustration: services and support" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES LIST -->
-  <section id="services-list" class="section">
-    <div class="container">
-      <h2 class="section-title">What we offer</h2>
-      <p class="muted">Services are scoped to educate, explain, and clarify — not to sell or recommend financial products.</p>
-
-      <div class="grid grid-3" style="margin-top:18px;">
-        <article class="feature-card" aria-labelledby="s1">
-          <div class="icon" aria-hidden="true">📘</div>
-          <h3 id="s1">Financial literacy support</h3>
-          <p>Custom workshops, bite-sized explainer sessions, and curriculum design for companies, communities, or schools.</p>
-          <a href="contact.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Request workshop</a>
-        </article>
-
-        <article class="feature-card" aria-labelledby="s2">
-          <div class="icon" aria-hidden="true">🔬</div>
-          <h3 id="s2">Market & economic research</h3>
-          <p>Concise, context-driven research briefs that explain why markets moved and what that means practically — non-promotional and transparent.</p>
-          <a href="contact.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Request brief</a>
-        </article>
-
-        <article class="feature-card" aria-labelledby="s3">
-          <div class="icon" aria-hidden="true">🧭</div>
-          <h3 id="s3">Knowledge-based guidance</h3>
-          <p>Clarification sessions to help teams and individuals understand financial concepts relevant to a decision — not advice on what to do.</p>
-          <a href="contact.html" class="btn-ghost" style="margin-top:10px;display:inline-block;">Book a session</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO IT IS FOR -->
-  <section class="section muted">
-    <div class="container">
-      <h2 class="section-title">Who we work with</h2>
-      <p>Our services are suited to organisations and individuals who prioritise learning and unbiased clarity:</p>
-
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px;">
-        <div class="card">
-          <strong>Companies</strong>
-          <p class="muted">Internal workshops and employee upskilling on financial topics.</p>
-        </div>
-
-        <div class="card">
-          <strong>Educators & institutions</strong>
-          <p class="muted">Course design support and modular content for classroom or online use.</p>
-        </div>
-
-        <div class="card">
-          <strong>Communities & groups</strong>
-          <p class="muted">Public workshops and explainers tailored to member needs.</p>
-        </div>
-
-        <div class="card">
-          <strong>Individuals</strong>
-          <p class="muted">Clarification sessions and learning plan reviews for personal learning goals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT WE DO NOT OFFER -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">What we do not provide</h2>
-      <p>To keep expectations clear, we explicitly list excluded services:</p>
-
-      <ul style="margin-top:18px; line-height:1.7; color:var(--muted);">
-        <li>No personalised investment advice</li>
-        <li>No portfolio or asset management</li>
-        <li>No product sales or commission-based recommendations</li>
-        <li>No promises or guaranteed financial outcomes</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PROCESS — HOW WE ENGAGE -->
-  <section class="section muted">
-    <div class="container">
-      <h2 class="section-title">How we engage</h2>
-      <div class="grid grid-3" style="margin-top:18px;">
-        <div class="how-step">
-          <div class="num">1</div>
-          <h4>Initial conversation</h4>
-          <p class="muted">We discuss your learning objectives and scope.</p>
-        </div>
-
-        <div class="how-step">
-          <div class="num">2</div>
-          <h4>Proposal & scope</h4>
-          <p class="muted">A clear, itemised outline of deliverables, timeline and costs (if applicable).</p>
-        </div>
-
-        <div class="how-step">
-          <div class="num">3</div>
-          <h4>Delivery & review</h4>
-          <p class="muted">Workshops, briefs or sessions delivered with follow-up materials and a short review period.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING NOTE & ENGAGEMENT CTA -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Pricing & engagement</h2>
-      <p class="muted">Pricing depends on scope, audience size, and deliverables. We provide clear proposals — no hidden fees or surprise charges.</p>
-
-      <div style="margin-top:20px; display:flex; gap:12px; align-items:center;">
-        <a href="contact.html" class="btn-primary">Request a proposal</a>
-        <a href="education.html" class="btn-ghost">View educational offerings</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section faq muted">
-    <div class="container">
-      <h2 class="section-title">Frequently asked questions</h2>
-
-      <div class="accordion" role="tablist" aria-label="Services FAQ" style="margin-top:18px;">
-        <details>
-          <summary>How long does a workshop typically last?</summary>
-          <div class="panel">Workshops range from 60 minutes (intro sessions) to half-day or multi-session programmes depending on objectives.</div>
-        </details>
-
-        <details>
-          <summary>Do you work with corporate procurement?</summary>
-          <div class="panel">Yes — we can provide formal proposals and invoices. All commercial terms are agreed in writing before work begins.</div>
-        </details>
-
-        <details>
-          <summary>Can you adapt content for different audiences?</summary>
-          <div class="panel">Yes — materials are tailored for the audience’s prior knowledge and the learning goals we agree on.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA / Contact -->
-  <section class="section cta-section">
-    <div class="container cta-grid">
-      <div>
-        <h3>Interested in a customised session or brief?</h3>
-        <p class="muted">Tell us about your needs and we'll provide a clear proposal tailored to your goals.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="contact.html" class="btn-primary large">Request a proposal</a>
-        <a href="contact.html#contact-hours" class="btn-ghost">Contact support</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <p>© 2026 MVNFINHUB. All rights reserved.</p>
-      <p class="muted">Education-first services. Not financial advice or product recommendations.</p>
-    </div>
-
-    <div class="footer-right">
-      <nav aria-label="Footer">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/contact.html">Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MVNFINHUB home">
+        <span class="logo-text">MVN<span class="accent">FINHUB</span></span>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn-outline">Contact</a></li>
+        </ul>
       </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+        <a href="education.html" class="btn-primary">Start Learning</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </header>
 
-<script src="script.js"></script>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p class="lead">We offer practical, transparent support for your financial journey — from documentation to clarity.</p>
+
+        <div class="grid grid-3">
+          <div class="feature-card">
+            <div class="icon">📄</div>
+            <h3>Document Support</h3>
+            <p>Get help understanding and organizing financial documents like bank statements, income proofs, and tax forms.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🧾</div>
+            <h3>KYC Guidance</h3>
+            <p>Step-by-step assistance with Know Your Customer (KYC) processes for banks, brokers, and digital platforms.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">📊</div>
+            <h3>Financial Templates</h3>
+            <p>Download free, easy-to-use templates for budgeting, expense tracking, and goal planning.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">💬</div>
+            <h3>1:1 Consultations</h3>
+            <p>Book a session to get personalized help with your financial questions — no sales, just clarity.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🔍</div>
+            <h3>Form Reviews</h3>
+            <p>We help you review and understand forms before submission — from loan applications to investment docs.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">📚</div>
+            <h3>Learning + Services</h3>
+            <p>Combine our free education with practical services to build confidence and take action responsibly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-grid">
+        <div>
+          <h2>Need help with something specific?</h2>
+          <p class="muted">Reach out to us with your requirements — we’ll guide you with clarity and care.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-primary">Request Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2026 MVNFINHUB. All rights reserved.</p>
+        <p class="muted">Free, concept-first education. No guarantees or advisory services.</p>
+      </div>
+      <div class="footer-right">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
