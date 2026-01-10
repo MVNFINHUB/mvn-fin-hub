@@ -3,116 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MVNFINHUB — Free finance education, explained clearly</title>
-  <meta name="description" content="MVNFINHUB — free, concept-first finance education and clarity. Practical concept guides and contextual insights." />
-
-  <!-- Theme & OG (replace og-image when you have an asset) -->
-  <meta property="og:title" content="MVNFINHUB — Free finance education" />
-  <meta property="og:description" content="Free, concept-first finance education and clarity." />
-  <meta property="og:image" content="assets/images/og-image.png" />
+  <title>MVNFinHub — Free, concept-first finance education</title>
+  <meta name="description" content="MVNFinHub — free, concept-first finance education, contextual market insights, and practical guides." />
+  <link rel="icon" href="favicon.png" type="image/png">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="brand">
 
-<header class="site-header container">
-  <a class="brand" href="index.html" aria-label="MVNFINHUB home">
-    <!-- Replace with your SVG logo if available -->
-    <svg width="36" height="28" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
-      <defs><linearGradient id="brandGrad" x1="0" x2="1"><stop offset="0" stop-color="#6C63FF"/><stop offset="1" stop-color="#00D1FF"/></linearGradient></defs>
-      <rect rx="6" width="60" height="40" fill="url(#brandGrad)"></rect>
-      <text x="8" y="26" font-family="Inter, system-ui" font-weight="700" font-size="16" fill="#ffffff">MVN</text>
-    </svg>
-    <span class="brand-text">FINHUB</span>
-  </a>
+  <!-- Header -->
+  <header class="site-header container" role="banner">
+    <a class="brand" href="index.html" aria-label="MVNFinHub home">
+      <!-- Replace MVNFinHub-logo.svg with your SVG wordmark; include compact mark inside file for mobile -->
+      <img src="MVNFinHub-logo.svg" alt="MVNFinHub logo" class="logo">
+    </a>
 
-  <nav class="nav">
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="education.html">Education</a>
+      <a href="insights.html">Insights</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn-outline">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme">🌙</button>
+      <a class="btn-primary" href="education.html">Start learning</a>
+      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile nav (hidden on desktop) -->
+  <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
     <a href="education.html">Education</a>
     <a href="insights.html">Insights</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
-    <a href="contact.html" class="btn-outline">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="actions">
-    <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme">🌙</button>
-    <a class="btn-primary" href="education.html">Start learning</a>
-  </div>
-</header>
+  <!-- Hero Slider -->
+  <section class="hero-slider" aria-label="Featured">
+    <div class="slides" id="slides">
+      <!-- Slide 1 -->
+      <article class="slide" data-index="0" aria-roledescription="slide" aria-label="Grow your finances with confidence">
+        <div class="slide-content container">
+          <div class="copy">
+            <p class="eyebrow">Free • Concept-first • No hype</p>
+            <h1>Grow your finances with confidence</h1>
+            <p class="lead">Free, concept-first guides and practical examples that make core financial ideas simple and useful.</p>
+            <div class="cta-row">
+              <a class="btn-primary large" href="education.html">Explore concepts — free</a>
+              <a class="btn-ghost" href="insights.html">Read insights</a>
+            </div>
+            <ul class="quick-features" aria-hidden="true">
+              <li>Concept-first guides</li>
+              <li>Practical exercises</li>
+              <li>Always free</li>
+            </ul>
+          </div>
 
-<main>
-  <section class="hero container">
-    <div class="hero-content">
-      <p class="eyebrow">Free • Concept-first • No hype</p>
-      <h1>Finance explained simply.<br><span>Clear, practical concepts — free for everyone.</span></h1>
-      <p class="lead">
-        MVNFINHUB publishes short concept guides and contextual insights designed to make financial topics approachable and useful. No sales, no guarantees — only learning.
-      </p>
+          <div class="visual">
+            <picture>
+              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?finance,people">
+              <img src="https://source.unsplash.com/1200x800/?finance,technology" alt="Illustration: people learning finance on devices">
+            </picture>
+          </div>
+        </div>
+      </article>
 
-      <div class="hero-ctas">
-        <a class="btn-primary large" href="education.html">Explore concepts — free</a>
-        <a class="btn-ghost" href="insights.html">Read insights</a>
-      </div>
+      <!-- Slide 2 -->
+      <article class="slide" data-index="1" aria-roledescription="slide" aria-label="Understand markets calmly">
+        <div class="slide-content container">
+          <div class="copy">
+            <p class="eyebrow">Read • Reflect • Apply</p>
+            <h1>Understand markets — calmly</h1>
+            <p class="lead">Short explainers that separate headlines from practical meaning so you can interpret market moves without the noise.</p>
+            <div class="cta-row">
+              <a class="btn-primary large" href="insights.html">Read insights</a>
+              <a class="btn-ghost" href="education.html#paths">Explore concepts</a>
+            </div>
+          </div>
 
-      <ul class="quick-features" aria-hidden="true">
-        <li>Concept-first guides</li>
-        <li>Practical examples & exercises</li>
-        <li>Always free</li>
-      </ul>
+          <div class="visual">
+            <picture>
+              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?market,chart">
+              <img src="https://source.unsplash.com/1200x800/?market,data" alt="Illustration: market data and charts">
+            </picture>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="slide" data-index="2" aria-roledescription="slide" aria-label="Build better financial habits">
+        <div class="slide-content container">
+          <div class="copy">
+            <p class="eyebrow">Practice • Improve • Repeat</p>
+            <h1>Build better financial habits</h1>
+            <p class="lead">Practical examples, worksheets and concept guides to help you form robust, long‑term habits — free of charge.</p>
+            <div class="cta-row">
+              <a class="btn-primary large" href="education.html">Start learning</a>
+              <a class="btn-ghost" href="contact.html">Suggest a topic</a>
+            </div>
+          </div>
+
+          <div class="visual">
+            <picture>
+              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?budget,planning">
+              <img src="https://source.unsplash.com/1200x800/?planning,workbook" alt="Illustration: budgeting and planning">
+            </picture>
+          </div>
+        </div>
+      </article>
     </div>
 
-    <div class="hero-media" aria-hidden="true">
-      <!-- Replace with your hero illustration / svg -->
-      <div class="glass-card">
-        <img src="assets/images/hero-finance-3d.png" alt="Finance illustration" loading="lazy">
-      </div>
+    <!-- Controls -->
+    <div class="slider-controls container">
+      <button class="prev" aria-label="Previous slide">‹</button>
+      <div class="indicators" role="tablist" aria-label="Slide indicators" id="slideIndicators"></div>
+      <button class="next" aria-label="Next slide">›</button>
     </div>
   </section>
 
-  <section class="section container cards">
-    <article class="card">
-      <h3>Free education</h3>
-      <p>All concept guides are provided free of cost — focused on explanations and practical understanding.</p>
+  <!-- Features -->
+  <section id="services" class="features container" aria-labelledby="services-heading">
+    <h2 id="services-heading" class="visually-hidden">Services & features</h2>
+
+    <article class="feature-card">
+      <img src="https://img.icons8.com/fluency/96/000000/stock-market.png" alt="" aria-hidden="true">
+      <h3>Concept Guides</h3>
+      <p>Short, focused explanations that build understanding — free and practical.</p>
     </article>
 
-    <article class="card">
-      <h3>Contextual insights</h3>
-      <p>Short reads that explain market moves and economic ideas clearly and calmly.</p>
+    <article class="feature-card">
+      <img src="https://img.icons8.com/fluency/96/000000/analytics.png" alt="" aria-hidden="true">
+      <h3>Contextual Insights</h3>
+      <p>Clear explanations of market moves and economic ideas without sensationalism.</p>
     </article>
 
-    <article class="card">
-      <h3>Trust & clarity</h3>
-      <p>No promises, no product sales — transparency and evidence-based explanations only.</p>
+    <article class="feature-card">
+      <img src="https://img.icons8.com/fluency/96/000000/shield.png" alt="" aria-hidden="true">
+      <h3>Trust & Transparency</h3>
+      <p>No product sales, no guarantees — only honest, education-first content.</p>
+    </article>
+
+    <article class="feature-card">
+      <img src="https://img.icons8.com/fluency/96/000000/worldwide-location.png" alt="" aria-hidden="true">
+      <h3>Accessible</h3>
+      <p>Mobile-friendly, readable lessons and exercises you can use anywhere.</p>
     </article>
   </section>
 
-  <section class="section container cta-slim">
+  <!-- CTA slim -->
+  <section class="cta-slim container" aria-hidden="false">
     <div>
       <h4>Want a topic explained?</h4>
-      <p class="muted">Suggest a concept through our contact page and we'll prioritise practical, clear coverage.</p>
+      <p class="muted">Suggest a concept through our contact page and we’ll prioritise practical, clear coverage.</p>
     </div>
     <div>
       <a class="btn-primary" href="contact.html">Suggest a topic</a>
     </div>
   </section>
-</main>
 
-<footer class="site-footer container">
-  <div>
-    <p>© 2026 MVNFINHUB</p>
-    <p class="muted">Free concept-first finance education. No advisory services.</p>
-  </div>
+  <!-- Footer -->
+  <footer class="site-footer container" role="contentinfo">
+    <div>
+      <p>© 2026 MVNFinHub</p>
+      <p class="muted">Free, concept-first finance education. No advisory services or guarantees.</p>
+    </div>
 
-  <nav class="footer-nav">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</footer>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
