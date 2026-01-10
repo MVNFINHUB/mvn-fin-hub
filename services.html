@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — MVNFinHub (Non‑Advisory Support)</title>
+  <meta name="description" content="MVNFinHub provides non‑advisory, education-first and administrative services: documentation assistance, KYC support, tutorials, portfolio tracking tools and financial literacy workshops." />
+
+  <!-- Use the site theme and fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* Page-specific enhancements */
+    .services-hero { padding: 48px 0; text-align: left; }
+    .services-hero .lead { max-width: 70ch; margin-top: 8px; color: var(--muted); }
+
+    .services-list { display: grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); margin-top:20px; }
+    .service-item { padding:20px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: 0 8px 30px rgba(2,6,23,0.06); color:var(--text-light); }
+    .service-item h3 { margin:0 0 10px 0; font-size:1.06rem; }
+    .service-item p { margin:0; color:var(--muted); font-size:0.97rem; }
+
+    /* Prominent non-advisory disclaimer (dark-theme friendly) */
+    .disclaimer {
+      margin-top:28px;
+      padding:18px;
+      border-radius:10px;
+      background: linear-gradient(90deg, rgba(10,108,255,0.06), rgba(0,194,160,0.02));
+      border-left:4px solid var(--primary);
+      color:var(--text-light);
+    }
+    .disclaimer strong{ color:#fff; }
+
+    /* CTA row */
+    .service-cta { display:flex; gap:12px; align-items:center; margin-top:20px; flex-wrap:wrap; }
+    @media (max-width:980px){
+      .services-hero { text-align:center }
+      .services-hero .lead { margin-left:0; margin-right:0; }
+      .service-cta { justify-content:center; }
+    }
+  </style>
+</head>
+<body class="theme-alien">
+
+  <!-- Header (consistent with site) -->
+  <header class="site-header container" role="banner">
+    <a class="brand" href="/" aria-label="MVNFinHub home">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/images/MVNFinHub-mark.svg">
+        <img src="/assets/images/MVNFinHub-logo.svg" alt="MVNFinHub" class="logo">
+      </picture>
+    </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="/education.html">Education</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/services.html" aria-current="page">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn-outline">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggleTop" class="icon-btn" aria-pressed="true" title="Toggle theme">🛸</button>
+      <a class="btn-primary" href="/contact.html">Get in touch</a>
+      <button id="mobileNavToggleTop" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile nav fallback -->
+  <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <a href="/education.html">Education</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <main role="main">
+    <!-- Hero / Intro -->
+    <section class="services-hero container" aria-labelledby="services-hero-title">
+      <h1 id="services-hero-title">Services — Non‑Advisory & Educational Support</h1>
+      <p class="lead">
+        MVNFinHub offers non‑advisory services that support learning, documentation, and administrative processes related to investing — always educational, never personalised advice. Below is a summary of practical support we provide.
+      </p>
+
+      <div class="service-cta" aria-hidden="false">
+        <a class="btn-primary" href="/contact.html">Request support</a>
+        <a class="btn-ghost" href="/education.html">Explore free concept guides</a>
+      </div>
+    </section>
+
+    <!-- Services list -->
+    <section class="container" aria-labelledby="services-list-title" style="padding-top:12px;">
+      <h2 id="services-list-title" class="visually-hidden">Available non-advisory services</h2>
+
+      <div class="services-list" role="list">
+        <div class="service-item" role="listitem">
+          <h3>Demat account documentation assistance</h3>
+          <p>Help with opening, updating or closing demat accounts, including KYC, FATCA, nomination forms and verification steps.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>KYC & compliance support</h3>
+          <p>Assist in completing KYC and other compliance forms required by brokers, banks and mutual funds; guidance on required documents and submission.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Document organisation & record keeping</h3>
+          <p>Digitise and organise investment‑related documents (statements, certificates, tax forms) and provide templates for simple tracking and record maintenance.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Investment process tutorials</h3>
+          <p>Walkthroughs and tutorials on how to use trading or investment platforms (placing orders, checking balances, redeeming funds) — procedural training only, no advice.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Portfolio tracking tools</h3>
+          <p>Provide spreadsheets, dashboards or app templates to track investments, with usage guidance and best‑practice suggestions for record keeping (not portfolio recommendations).</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Mutual fund & insurance form assistance</h3>
+          <p>Help filling mutual fund subscription forms, insurance applications, and loan paperwork — review for completeness and correct formatting.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Document verification & submission help</h3>
+          <p>Review forms for common errors and assist with uploading or submitting documentation to brokers or institutions.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>General market education content</h3>
+          <p>Blogs, guides and short videos explaining concepts such as SIPs, ETFs, bonds, PPF — educational material designed to build understanding, not to recommend.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Tax documentation support</h3>
+          <p>Help compile investment summaries and paperwork needed for tax filing (capital gains, dividends, tax statements) without providing personalised tax advice.</p>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <h3>Workshops & webinars</h3>
+          <p>Conduct workshops on budgeting, saving, risk awareness and product literacy. Sessions are educational and non‑promotional; no personalised investment recommendations are provided.</p>
+        </div>
+      </div>
+
+      <!-- Prominent non-advisory disclaimer -->
+      <div class="disclaimer" role="note" aria-live="polite">
+        <strong>Disclaimer:</strong><br>
+        The services provided by MVNFinHub are strictly educational and administrative. We do <strong>not</strong> provide personalised investment advice, stock recommendations, portfolio management, or personalised tax advice. Users remain fully responsible for their investment decisions. For tailored investment advice, please consult a SEBI‑registered investment advisor or another appropriately licensed professional.
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer container" role="contentinfo" style="margin-top:36px;">
+    <div>
+      <p>© 2026 MVNFinHub</p>
+      <p class="muted">Free, concept-first education. No advisory services or guarantees.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
