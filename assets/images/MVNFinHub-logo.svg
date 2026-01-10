@@ -1,0 +1,22 @@
+<!-- MVNFinHub wordmark SVG: drop into /assets/images/MVNFinHub-logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="56" viewBox="0 0 320 56" role="img" aria-label="MVNFinHub">
+  <defs>
+    <linearGradient id="g-logo" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0A6CFF"/>
+      <stop offset="1" stop-color="#00C2A0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- MVN mark -->
+  <g transform="translate(4,6)">
+    <rect x="0" y="0" width="56" height="44" rx="10" fill="url(#g-logo)" />
+    <text x="8" y="32" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
+          font-weight="700" font-size="22" fill="#ffffff" letter-spacing="-0.5">MVN</text>
+  </g>
+
+  <!-- Wordmark text -->
+  <g transform="translate(72,36)">
+    <text x="0" y="0" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
+          font-weight="700" font-size="20" fill="#e6f0ff">FINHUB</text>
+  </g>
+</svg>
