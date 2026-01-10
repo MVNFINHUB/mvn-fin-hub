@@ -1,9 +1,22 @@
-// Minimal motion for premium feel
-document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-  btn.addEventListener('mouseenter', () => {
-    btn.style.transform = 'translateY(-2px)';
+/* =========================
+   DARK MODE TOGGLE
+   ========================= */
+const toggleBtn = document.getElementById("themeToggle");
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
   });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = 'translateY(0)';
+}
+
+/* =========================
+   SUBTLE MOTION POLISH
+   ========================= */
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "translateY(-4px)";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "translateY(0)";
   });
 });
