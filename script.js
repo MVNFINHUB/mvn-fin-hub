@@ -1,4 +1,4 @@
-/* Lightweight slider + theme toggle + mobile nav
+/* MVNFINHUB – Lightweight slider + theme toggle + mobile nav
    Accessible: keyboard support, aria-live announcements, indicators.
 */
 (function () {
@@ -8,9 +8,9 @@
   const nextBtn = document.querySelector('.next');
   const indicatorsEl = document.getElementById('slideIndicators');
   const hero = document.querySelector('.hero-slider');
-  const mobileNavToggle = document.getElementById('mobileNavToggle');
-  const mobileNav = document.getElementById('mobileNav');
   const themeToggle = document.getElementById('themeToggle');
+  const mobileNavToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('primaryNav');
 
   let current = 0;
   let autoplayInterval = 6000;
@@ -19,6 +19,7 @@
 
   // Build indicators
   function createIndicators() {
+    if (!indicatorsEl) return;
     slides.forEach((_, i) => {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -32,12 +33,14 @@
   }
 
   function updateIndicators(idx) {
+    if (!indicatorsEl) return;
     Array.from(indicatorsEl.children).forEach((b, i) => {
       b.setAttribute('aria-selected', i === idx ? 'true' : 'false');
     });
   }
 
   function goTo(index, userTriggered = false) {
+    if (!slidesEl) return;
     current = (index + slides.length) % slides.length;
     slidesEl.style.transform = `translateX(-${current * 100}%)`;
     updateIndicators(current);
@@ -49,7 +52,7 @@
   function prev() { goTo(current - 1); }
 
   function startAutoplay() {
-    if (!autoplayEnabled) return;
+    if (!autoplayEnabled || !slides.length) return;
     autoplayId = setInterval(next, autoplayInterval);
   }
 
@@ -65,63 +68,72 @@
     }, 12000);
   }
 
-  // keyboard support
+  // Keyboard support
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prev();
     if (e.key === 'ArrowRight') next();
   });
 
-  // hover pause
-  hero.addEventListener('mouseenter', () => stopAutoplay());
-  hero.addEventListener('mouseleave', () => startAutoplay());
+  // Hover pause
+  if (hero) {
+    hero.addEventListener('mouseenter', stopAutoplay);
+    hero.addEventListener('mouseleave', startAutoplay);
+  }
 
-  // controls
-  prevBtn.addEventListener('click', prev);
-  nextBtn.addEventListener('click', next);
+  // Controls
+  if (prevBtn) prevBtn.addEventListener('click', prev);
+  if (nextBtn) nextBtn.addEventListener('click', next);
 
-  // announce slide for screen readers
+  // Screen reader announcement
   const live = document.createElement('div');
   live.className = 'visually-hidden';
   live.setAttribute('aria-live', 'polite');
   document.body.appendChild(live);
 
   function announceSlide(idx) {
-    const title = slides[idx].querySelector('h1')?.textContent || `Slide ${idx + 1}`;
+    const title = slides[idx]?.querySelector('h1, h2, h3')?.textContent || `Slide ${idx + 1}`;
     live.textContent = `Showing: ${title}`;
   }
 
-  // Theme toggle: toggles alien / light
+  // Theme toggle
   function applyTheme(theme) {
     if (theme === 'light') {
-      document.body.classList.remove('theme-alien');
+      document.body.classList.remove('dark');
       themeToggle.textContent = '🌤️';
     } else {
-      document.body.classList.add('theme-alien');
-      themeToggle.textContent = '🛸';
+      document.body.classList.add('dark');
+      themeToggle.textContent = '🌙';
     }
     localStorage.setItem('mvn-theme', theme);
   }
-  const saved = localStorage.getItem('mvn-theme') || 'alien';
-  applyTheme(saved);
-  themeToggle.addEventListener('click', () => {
-    const isAlien = document.body.classList.toggle('theme-alien');
-    applyTheme(isAlien ? 'alien' : 'light');
-  });
+
+  const savedTheme = localStorage.getItem('mvn-theme') || 'light';
+  applyTheme(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      applyTheme(isDark ? 'dark' : 'light');
+    });
+  }
 
   // Mobile nav toggle
-  mobileNavToggle.addEventListener('click', () => {
-    const expanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
-    mobileNavToggle.setAttribute('aria-expanded', String(!expanded));
-    mobileNav.setAttribute('aria-hidden', String(expanded));
-    mobileNav.style.display = expanded ? 'none' : 'flex';
-  });
+  if (mobileNavToggle && mobileNav) {
+    mobileNavToggle.addEventListener('click', () => {
+      const expanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
+      mobileNavToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.style.display = expanded ? 'none' : 'flex';
+    });
+  }
 
-  // Init slider
-  createIndicators();
-  updateIndicators(0);
-  announceSlide(0);
-  startAutoplay();
+  // Init
+  if (slides.length && slidesEl) {
+    createIndicators();
+    updateIndicators(0);
+    announceSlide(0);
+    startAutoplay();
+  }
 
-  // Expose for debugging
+  // Debug
   window.mvns = { goTo, next, prev, slidesCount: slides.length };
 })();
