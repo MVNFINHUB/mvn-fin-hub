@@ -1,3 +1,26 @@
+/* =========================
+   THEME VARIABLES (LIGHT)
+   ========================= */
+:root {
+  --primary: #0b5cff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --bg-main: #ffffff;
+  --bg-muted: #f6f7f9;
+  --border-light: #e5e7eb;
+}
+
+/* =========================
+   DARK MODE VARIABLES
+   ========================= */
+body.dark {
+  --primary: #4f8cff;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --bg-main: #0b1220;
+  --bg-muted: #111827;
+  --border-light: #1f2937;
+}
 :root {
   --primary: #0b5cff;
   --text-main: #0f172a;
@@ -16,8 +39,10 @@
 /* BASE */
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg-light);
+ body {
+  background: var(--bg-main);
   color: var(--text-main);
+}
   line-height: 1.7;
 }
 
@@ -148,7 +173,8 @@ nav a {
 
 /* FOOTER */
 .footer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-light);
+}
   padding: 32px 0;
   font-size: 0.85rem;
   color: var(--text-muted);
