@@ -4,185 +4,202 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MVNFinHub — Free, concept-first finance education</title>
-  <meta name="description" content="MVNFinHub — free, concept-first finance education, contextual market insights, and practical guides." />
-  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="description" content="MVNFinHub — free, concept-first finance education, contextual market insights, and practical concept guides." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MVNFinHub — Free finance education" />
+  <meta property="og:description" content="Free, concept-first finance education and clarity." />
+  <meta property="og:image" content="/assets/images/og-image.png" />
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="/assets/images/MVNFinHub-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Theme -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- PWA manifest (optional) -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0A6CFF">
 </head>
-<body class="brand">
+<body class="theme-alien">
 
   <!-- Header -->
   <header class="site-header container" role="banner">
-    <a class="brand" href="index.html" aria-label="MVNFinHub home">
-      <!-- Replace MVNFinHub-logo.svg with your SVG wordmark; include compact mark inside file for mobile -->
-      <img src="MVNFinHub-logo.svg" alt="MVNFinHub logo" class="logo">
+    <a class="brand" href="/" aria-label="MVNFinHub home">
+      <picture>
+        <source media="(max-width:640px)" srcset="/assets/images/MVNFinHub-mark.svg">
+        <img src="/assets/images/MVNFinHub-logo.svg" alt="MVNFinHub" class="logo">
+      </picture>
     </a>
 
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
-      <a href="education.html">Education</a>
-      <a href="insights.html">Insights</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="btn-outline">Contact</a>
+      <a href="/education.html">Education</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn-outline">Contact</a>
     </nav>
 
     <div class="header-actions">
-      <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme">🌙</button>
-      <a class="btn-primary" href="education.html">Start learning</a>
+      <button id="themeToggle" class="icon-btn" aria-pressed="true" title="Toggle theme">🛸</button>
+      <a class="btn-primary" href="/education.html">Start learning</a>
       <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
-  <!-- Mobile nav (hidden on desktop) -->
+  <!-- Mobile nav -->
   <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
-    <a href="education.html">Education</a>
-    <a href="insights.html">Insights</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="/education.html">Education</a>
+    <a href="/insights.html">Insights</a>
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
   </nav>
 
-  <!-- Hero Slider -->
-  <section class="hero-slider" aria-label="Featured">
-    <div class="slides" id="slides">
-      <!-- Slide 1 -->
-      <article class="slide" data-index="0" aria-roledescription="slide" aria-label="Grow your finances with confidence">
-        <div class="slide-content container">
-          <div class="copy">
-            <p class="eyebrow">Free • Concept-first • No hype</p>
-            <h1>Grow your finances with confidence</h1>
-            <p class="lead">Free, concept-first guides and practical examples that make core financial ideas simple and useful.</p>
-            <div class="cta-row">
-              <a class="btn-primary large" href="education.html">Explore concepts — free</a>
-              <a class="btn-ghost" href="insights.html">Read insights</a>
+  <!-- HERO SLIDER -->
+  <main>
+    <section class="hero-slider" aria-label="Featured content">
+      <div class="slides" id="slides" role="region" aria-roledescription="carousel" aria-label="Top stories">
+        <!-- Slide 1 -->
+        <article class="slide" data-index="0" aria-roledescription="slide" aria-label="Grow your finances with confidence">
+          <div class="slide-content container">
+            <div class="copy">
+              <p class="eyebrow">Free · Concept-first · No hype</p>
+              <h1>Grow your finances with confidence</h1>
+              <p class="lead">Free concept guides and practical examples that make core financial ideas simple and useful.</p>
+              <div class="cta-row">
+                <a class="btn-primary large" href="/education.html">Explore concepts — free</a>
+                <a class="btn-ghost" href="/insights.html">Read insights</a>
+              </div>
+              <ul class="quick-features" aria-hidden="true">
+                <li>Concept-first guides</li>
+                <li>Practical exercises</li>
+                <li>Always free</li>
+              </ul>
             </div>
-            <ul class="quick-features" aria-hidden="true">
-              <li>Concept-first guides</li>
-              <li>Practical exercises</li>
-              <li>Always free</li>
-            </ul>
-          </div>
 
-          <div class="visual">
-            <picture>
-              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?finance,people">
-              <img src="https://source.unsplash.com/1200x800/?finance,technology" alt="Illustration: people learning finance on devices">
-            </picture>
-          </div>
-        </div>
-      </article>
-
-      <!-- Slide 2 -->
-      <article class="slide" data-index="1" aria-roledescription="slide" aria-label="Understand markets calmly">
-        <div class="slide-content container">
-          <div class="copy">
-            <p class="eyebrow">Read • Reflect • Apply</p>
-            <h1>Understand markets — calmly</h1>
-            <p class="lead">Short explainers that separate headlines from practical meaning so you can interpret market moves without the noise.</p>
-            <div class="cta-row">
-              <a class="btn-primary large" href="insights.html">Read insights</a>
-              <a class="btn-ghost" href="education.html#paths">Explore concepts</a>
+            <div class="visual">
+              <picture>
+                <source media="(max-width:900px)" srcset="https://images.unsplash.com/photo-1526378729963-3f9ea0a7ca8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+                <img src="https://images.unsplash.com/photo-1526378729963-3f9ea0a7ca8b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="People collaborating on finance and technology">
+              </picture>
             </div>
           </div>
+        </article>
 
-          <div class="visual">
-            <picture>
-              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?market,chart">
-              <img src="https://source.unsplash.com/1200x800/?market,data" alt="Illustration: market data and charts">
-            </picture>
-          </div>
-        </div>
-      </article>
+        <!-- Slide 2 -->
+        <article class="slide" data-index="1" aria-roledescription="slide" aria-label="Understand markets calmly">
+          <div class="slide-content container">
+            <div class="copy">
+              <p class="eyebrow">Read · Reflect · Apply</p>
+              <h1>Understand markets — calmly</h1>
+              <p class="lead">Short explainers that separate headlines from practical meaning so you can interpret market moves without the noise.</p>
+              <div class="cta-row">
+                <a class="btn-primary large" href="/insights.html">Read insights</a>
+                <a class="btn-ghost" href="/education.html#paths">Explore concepts</a>
+              </div>
+            </div>
 
-      <!-- Slide 3 -->
-      <article class="slide" data-index="2" aria-roledescription="slide" aria-label="Build better financial habits">
-        <div class="slide-content container">
-          <div class="copy">
-            <p class="eyebrow">Practice • Improve • Repeat</p>
-            <h1>Build better financial habits</h1>
-            <p class="lead">Practical examples, worksheets and concept guides to help you form robust, long‑term habits — free of charge.</p>
-            <div class="cta-row">
-              <a class="btn-primary large" href="education.html">Start learning</a>
-              <a class="btn-ghost" href="contact.html">Suggest a topic</a>
+            <div class="visual">
+              <picture>
+                <source media="(max-width:900px)" srcset="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+                <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Market charts and data visualization">
+              </picture>
             </div>
           </div>
+        </article>
 
-          <div class="visual">
-            <picture>
-              <source media="(max-width:900px)" srcset="https://source.unsplash.com/800x600/?budget,planning">
-              <img src="https://source.unsplash.com/1200x800/?planning,workbook" alt="Illustration: budgeting and planning">
-            </picture>
+        <!-- Slide 3 -->
+        <article class="slide" data-index="2" aria-roledescription="slide" aria-label="Build better financial habits">
+          <div class="slide-content container">
+            <div class="copy">
+              <p class="eyebrow">Practice · Improve · Repeat</p>
+              <h1>Build better financial habits</h1>
+              <p class="lead">Practical examples, worksheets and concept guides to help you form robust, long‑term habits — free of charge.</p>
+              <div class="cta-row">
+                <a class="btn-primary large" href="/education.html">Start learning</a>
+                <a class="btn-ghost" href="/contact.html">Suggest a topic</a>
+              </div>
+            </div>
+
+            <div class="visual">
+              <picture>
+                <source media="(max-width:900px)" srcset="https://images.unsplash.com/photo-1488998427799-e3362cec87c8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+                <img src="https://images.unsplash.com/photo-1488998427799-e3362cec87c8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Person planning and writing in a workbook">
+              </picture>
+            </div>
           </div>
-        </div>
+        </article>
+      </div>
+
+      <!-- Controls -->
+      <div class="slider-controls container" aria-hidden="false">
+        <button class="prev" aria-label="Previous slide">‹</button>
+        <div class="indicators" role="tablist" aria-label="Slide indicators" id="slideIndicators"></div>
+        <button class="next" aria-label="Next slide">›</button>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="services" class="features container" aria-labelledby="services-heading">
+      <h2 id="services-heading" class="visually-hidden">Services & features</h2>
+
+      <article class="feature-card">
+        <img src="https://img.icons8.com/fluency/96/ffffff/book.png" alt="" aria-hidden="true">
+        <h3>Concept Guides</h3>
+        <p>Short, focused explanations that build understanding — free and practical.</p>
       </article>
-    </div>
 
-    <!-- Controls -->
-    <div class="slider-controls container">
-      <button class="prev" aria-label="Previous slide">‹</button>
-      <div class="indicators" role="tablist" aria-label="Slide indicators" id="slideIndicators"></div>
-      <button class="next" aria-label="Next slide">›</button>
-    </div>
-  </section>
+      <article class="feature-card">
+        <img src="https://img.icons8.com/fluency/96/ffffff/analytics.png" alt="" aria-hidden="true">
+        <h3>Contextual Insights</h3>
+        <p>Clear explanations of market moves and economic ideas without sensationalism.</p>
+      </article>
 
-  <!-- Features -->
-  <section id="services" class="features container" aria-labelledby="services-heading">
-    <h2 id="services-heading" class="visually-hidden">Services & features</h2>
+      <article class="feature-card">
+        <img src="https://img.icons8.com/fluency/96/ffffff/shield.png" alt="" aria-hidden="true">
+        <h3>Trust & Transparency</h3>
+        <p>No product sales, no guarantees — only honest, education-first content.</p>
+      </article>
 
-    <article class="feature-card">
-      <img src="https://img.icons8.com/fluency/96/000000/stock-market.png" alt="" aria-hidden="true">
-      <h3>Concept Guides</h3>
-      <p>Short, focused explanations that build understanding — free and practical.</p>
-    </article>
+      <article class="feature-card">
+        <img src="https://img.icons8.com/fluency/96/ffffff/worldwide-location.png" alt="" aria-hidden="true">
+        <h3>Accessible</h3>
+        <p>Mobile-friendly, readable lessons and exercises you can use anywhere.</p>
+      </article>
+    </section>
 
-    <article class="feature-card">
-      <img src="https://img.icons8.com/fluency/96/000000/analytics.png" alt="" aria-hidden="true">
-      <h3>Contextual Insights</h3>
-      <p>Clear explanations of market moves and economic ideas without sensationalism.</p>
-    </article>
-
-    <article class="feature-card">
-      <img src="https://img.icons8.com/fluency/96/000000/shield.png" alt="" aria-hidden="true">
-      <h3>Trust & Transparency</h3>
-      <p>No product sales, no guarantees — only honest, education-first content.</p>
-    </article>
-
-    <article class="feature-card">
-      <img src="https://img.icons8.com/fluency/96/000000/worldwide-location.png" alt="" aria-hidden="true">
-      <h3>Accessible</h3>
-      <p>Mobile-friendly, readable lessons and exercises you can use anywhere.</p>
-    </article>
-  </section>
-
-  <!-- CTA slim -->
-  <section class="cta-slim container" aria-hidden="false">
-    <div>
-      <h4>Want a topic explained?</h4>
-      <p class="muted">Suggest a concept through our contact page and we’ll prioritise practical, clear coverage.</p>
-    </div>
-    <div>
-      <a class="btn-primary" href="contact.html">Suggest a topic</a>
-    </div>
-  </section>
+    <!-- CTA slim -->
+    <section class="cta-slim container">
+      <div>
+        <h4>Want a topic explained?</h4>
+        <p class="muted">Suggest a concept through our contact page and we’ll prioritise practical, clear coverage.</p>
+      </div>
+      <div>
+        <a class="btn-primary" href="/contact.html">Suggest a topic</a>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer container" role="contentinfo">
     <div>
       <p>© 2026 MVNFinHub</p>
-      <p class="muted">Free, concept-first finance education. No advisory services or guarantees.</p>
+      <p class="muted">Free concept-first finance education. No advisory services or guarantees.</p>
     </div>
 
     <nav class="footer-nav" aria-label="Footer">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
     </nav>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script src="/script.js"></script>
 </body>
 </html>
